@@ -1,0 +1,335 @@
+Day 6 
+
+*React:
+
+-It is a javascript library
+-It is use to create rich user interface
+-It create single page application(SPA)
+
+
+*Technology pre-requisite
+-html,css,js(basic,ES5 and ES6,oops)
+
+
+Software pre-requisite
+-node js
+node -v (check version)
+
+-vs code
+
+How to create react proj
+1. by using npm: need to install configuration file 
+	(Steps to create react proj)
+	- npm i install -g create-react-app
+	- create-react-app appname
+	- cd appname
+	- npm start
+
+2. by using npx: no need to install configuration file
+	(Steps to create react proj)
+	- npx create-react-app appname
+	- cd appname
+	- npm start
+
+3. by using vite: it create proj with minimum package
+
+
+*start proj 
+npm start
+
+*display react project
+localhost:3000
+
+
+*react folder structure
+node_modules : all the dependencies and dev-dependencies will install in this folder 
+package.json : all dependencies entry will found.
+package-lock.json: detail description of file will be found here.
+README.md : it is a guide file how to use react project
+
+public : it contain static data file 
+
+
+*React is componenet basis Technology
+-componenet : it is partial part of react project
+			 -which we can reuse throughout react project
+			 -it can be any part of  react project
+
+
+	-in react app.js is root componenet
+
+	-in each we have 2 types
+	1. function componenet : main focus is on ui design
+	2. class componenet : when you have to implement complex logic in that case we it .
+
+	*how to display component output
+	*JSX(javascript + XML):
+		-it allows us to write html code in react
+		-it makes react code easy in jsx we have wrap multiple elements inside one paren elements
+		-parent element must be any block element like div , h1-h6 , p etc
+
+
+*props : 
+		-it is parameter or functional  parameter which is use pass data inside componenet
+		-props return data in object format
+		-we can access props in function componenet by writing props.propsname
+		-we can access props in class component by writing this.props.propsname
+
+
+*method and event in react 
+
+*state : 
+- it is use to handle essential in class component 
+- it return us object  type of data 
+- in class componenet we write state inside constructor.
+
+-if you want to use statein function component for that we use useState hook
+
+*setState :  it is used to manipulate state data inside class component
+
+MyStateComp
+
+*Conditional rendering : 
+-display component on the basis of Conditional
+1. use of if else: if condition is true then if block will execute otherwise else block
+2. element as variable : in variable we store data and display inside tag and return it.
+3. use of ternary operator : short hand syntax for if else
+								(condition)? truepart : falsepart;
+4. use of short - circuit : if condition is true then only it will display output
+
+
+*CSS
+
+	1. internal css
+	2. External css
+	3. module css : -it 
+
+
+
+============================================================================================
+
+Day 7
+
+
+*Fragment in react : -It is an alternative option 
+					 -It remove unwanted element from DOM heirarchy
+
+*component interaction :
+	-access data from parent component to child componenet
+	-while performing componenet interaction in between component they must have perfect child relation
+	-import child and call child in parent
+
+*passing state data as props :
+	passing function data as props
+
+
+*PureComp :
+	-it is used to prevent unnecessary re-rendering class componenet by performing shallow comparison
+	-to achieve this we have to extends class componenet with PureComponent class.
+
+
+*React.Memo():
+	-it is use to prevent un-necessary re-rendering function component by performing shallow comparison
+	-to achieve we have to pass function componenet name as argument to react.memo() method
+
+
+
+*HOC (Higher order component):
+		- when we have to share same bussiness logic with multiple componenet in that case we use it.
+		- in this we share bussiness logic from function component to class or function component
+
+
+*Error boundary : it is react component which is used to handle error occur in component while rendering component .
+				  -to handle it we use two class component life cycle method	
+
+		1. getDerivedStateFromError(): when error occur in component it execute automatically 
+		2. componentDidCatch() : it will display error log (error information)
+
+
+
+virtual DOM
+
+	instead of manipulating the browser dom directly it creates a virtal dom in browser where it makes all changes on browser dom 
+	-react renders the code that need to be rendered only 
+	-thats y react is faster
+
+=================================================================================
+
+
+Day 8 
+
+*Routing in react : 
+-navigation of component.
+-by writing routing path name in browser url to display componenet output or view
+-we use react-router-dom library in react to perform routing.
+
+
+*install react router
+
+npm install react-router-dom@6
+
+
+
+1. createBrowserDOM() : it is a method which takes array of types of data
+						-in its obj we use 2 property path , element
+						-in this method we define all types of routing
+
+2. RouterProvider() : -It helps us to render output of all routing component on browser.
+
+
+*types of routing
+
+1. naming routing : display component output after writing component routing path name in browser url
+
+2. Default routing : display componenet output without  routing pathname
+
+3. parameterized routing : display component output after passing parameter with routing path name.
+
+4. Child routing : -display one routing inside another routing
+				   -to perform child routing we use children property in object which array of object value
+				   -to display child routing output we have to add <Outlet> library in parent routing  component	
+
+5. Wild-card routing : when user write wrong path name in browser url then we decide what component output should display.
+						- in wild-card routing path we write path value as *
+						- (***) wild-card routing always write at last,below it routing will not work
+
+
+*Class component LifeCycle method:
+		-it comes with four phases:
+			1. Mounting phases : 
+								- constructor : when class obj initialized constructor get executed automatically.
+								- getDerivedStateFromProps: it is static method 
+								- render 
+								- componentDidMount
+			2. update phase : when Dom manipulation is done 
+								- shouldComponentUpdate : 1.it decide wheather component will update or not
+														  2. It return boolean value if true then component will update.
+
+
+- mounting phase : when component initialize
+       - constructor : class obj initialize constructor get execute automatically
+       - getDerivedStateFromprops:it is static method and it is used to set values coming from props to state
+       - render : it is respomsible to render component data
+       - componentDidMount : it will execute imediately after render method
+
+- update phase : when dom manipulation is done
+                 - shouldComponentUpdate: decide wheter component will update or not.
+                                          it return boolean value if true then component will update
+                 - getSnapShotbeforUpdate :it return prev data of props and state before updation of it
+                 -render: it is respomsible to render component data
+                 -componentDidUpdate: it wil return update value of state and props
+
+
+
+
+			3. Unmounting phase : When componenet is deleted
+						- componentwillunmount : it just call before component deleted , it is use to disconnect component connection with other component.
+			4. Error phase : 
+						- getDerivedStateFromError() : it execute automatically when error occur in component
+						- componentDidCatch() : it return error log
+
+
+
+React/Redux extension:
+
+function Comp shortcut : 
+ - rfce : create normal function Comp
+ - rafce : create arrow function Comp
+ - rce : create class Comp
+ - rconst : create class Comp with constructor with super
+
+
+
+ *Hooks in react :
+	- it allows us to use class component feature in function component
+	- by using hooks we can use state in function component
+	- in react hooks introduce in react version - 16
+
+
+*rules to use hook
+		1. Hooks work only in function component
+		2. Hooks always use in top level componenet
+		3. Hooks can not be render Conditionaly
+
+
+1. useState hook : 
+2. useEffect hook : 
+3. useContext hook : 
+4. useRef hook : 
+5. useReducer hook :
+6. useCallback hook :
+7. useMemo hook : 
+
+
+1. useState : 
+		- if you want to use useState in function component for that you have to use useState hook
+		- it return 2 values , 1.currentState , 2. function-to-update-stateData.
+		- before using it import it first from react
+
+	syntax : 
+			const [currentState,functionToUpdateState] = useState(value);
+
+
+2. useEffect : 
+		- it will execute after component render data
+		- it will handle work of componentDidMount,componentDidUpdate,componentwillunmount in function.
+		- it takes two values 1. useCallback function , 2. dependencies
+
+	syntax : 
+			useEffect(()=>{},dependencies);
+
+
+
+
+case 1 : when no dependencies passed
+		- useeffect will execute after every render
+		syntax : useEffect(()=>{});
+case 2 : when we pass dependency value as blank array
+		- useEffect hook will execute only once
+		syntax : useEffect(()=>{},[]);
+case 3 : when we have to execute useEffect hook as we wait
+		- we pass value in dependencies
+		syntax : useEffect(()=>{},dependencies);
+
+
+=========================================================================================
+
+Day 9
+
+
+*validation for dropdown
+
+
+*CRUD 
+*REST FAKE API:
+- Axios library : It is use to make request from React app to server.
+- How to install Axios : 
+	npm i axios 
+
+*json-server:
+- it is dummy server , which server environment to database
+- install	
+	npm install json-server
+
+
+*json database:
+
+
+*how to start and json-server and upload db.json
+
+cd src/shared/database 
+
+json-server --watch -p 8000 db.json
+
+--watch : (watching mode  for server to automatically restart when db.json value changes)
+
+
+*get request : to fetch data from server
+
+
+*Material UI : 
+
+- it provide inbuilt react component , which makes react project attraction
+- as well as it provide icon 
+
+UseNavigate : 
