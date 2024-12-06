@@ -1,0 +1,51 @@
+{
+  "Products": [
+    {
+      "id": "101",
+      "pname": "laptop",
+      "pprice": 50000,
+      "pcompany": "Hp",
+      "pquntity": "1"
+    },
+    {
+      "id": "104",
+      "pname": "PS5",
+      "pprice": 45000,
+      "pcompany": "Sony",
+      "pquntity": 5
+    },
+    {
+      "id": "104",
+      "pname": "PS5",
+      "pprice": 45000,
+      "pcompany": "Sony",
+      "pquntity": 5
+    },
+    {
+      "id": "104",
+      "pname": "PS5",
+      "pprice": 45000,
+      "pcompany": "Sony",
+      "pquntity": 5
+    },
+    {
+      "id": "166c",
+      "pname": "Monitor",
+      "pprice": "30000",
+      "pcompany": "Changepond Technologies",
+      "pquntity": "34"
+    }
+  ],
+  "Users": [
+    {
+      "id": "1",
+      "userId": "admin@gmail.com",
+      "userpass": "admin@123"
+    },
+    {
+      "id": "2",
+      "userId": "rajkumar@gmail.com",
+      "userpass": "raj@123"
+    }
+  ]
+}
